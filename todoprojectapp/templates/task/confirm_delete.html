@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <title>Welcome</title>
+</head>
+<body>
+
+
+  <form method="post" action="" class="confirmation-form">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ object.name }}"?</p>
+    <button type="submit" class="btn btn-delete">Yes, Delete</button>
+    <a href="{% url 'dashboard' %}" class="btn btn-cancel">Cancel</a>
+  </form>
+  </body>
+  </html>
+

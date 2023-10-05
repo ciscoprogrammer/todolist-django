@@ -1,0 +1,9 @@
+<h1>{{ request.user.username }}'s Profile</h1>
+<h2>Task List:</h2>
+<ul>
+    {% for task in tasks %}
+        <li>{{ task.name }} - {{ task.description }}</li>
+    {% empty %}
+        <li>No tasks available.</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,261 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.welcome-body {
+    
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header {
+        background-color: #4CAF50;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+    
+    .header h1 {
+        margin: 0;
+    }
+    
+    .auth-links {
+        margin-top: 20px;
+    }
+
+h1, h2 {
+    color: #333366;
+}
+
+h2 {
+    text-align: center;
+    font-size:29px;
+}
+
+.auth-links {
+    margin-top: 20px;
+}
+
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+
+
+
+
+
+.user-profile-btn {
+    background-color: slateblue;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size:16px;
+    padding :10px 20px;
+    text-decoration: none;
+    cursor :pointer;
+    border-radius :5px;
+    margin-right :25px;
+
+
+}
+.btn-back {
+    background-color :purple; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 29px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+form {
+    background-color: #ffffff;
+    padding: 35px;
+    padding-right: 50px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: auto;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #4CAF50;
+}
+
+a {
+    color: #4CAF50;
+}
+
+.task-heading {
+    color: blue;
+}
+
+.add-task-link {
+    font-size: 16px; /* Make text larger */
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block; /* Make it eligible for padding */
+}
+
+
+
+.edit-link, .delete-link {
+    margin-left: 10px; /* Add space */
+    font-size: x-large /* Make text bigger */
+     /* Remove underline */
+}
+
+.edit-link {
+    color: blue;
+}
+
+.delete-link {
+    color: red;
+}
+
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.task-table, .task-table th, .task-table td {
+    border: 1px solid #ddd;
+}
+
+.task-table th, .task-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.task-table th {
+    background-color: #f2f2f2;
+}
+
+.name-input {
+    width: 296px;
+    height: 21px;
+    
+}
+
+
+.description-input {
+    width: 300px;
+    height: 100px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.confirmation-form {
+    max-width: 300px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-delete {
+    background-color: #e74c3c; /* Red */
+    color: #fff;
+}
+
+.btn-cancel {
+    background-color: #3498db; /* Blue */
+    color: #fff;
+}
+
+.logout-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: fixed; /* Fix the position regardless of page scroll */
+    top: 10px; /* 10px from the top */
+    right: 10px; /* 10px from the right */
+    transition-duration: 0.4s;
+}
+
+
+/* Responsive CSS */
+@media (max-width: 480px) {
+    input, textarea {
+        width: calc(100% - 16px);
+    }
+
+    .name-input, .description-input {
+        width: calc(100% - 16px);
+    }
+}
+
+

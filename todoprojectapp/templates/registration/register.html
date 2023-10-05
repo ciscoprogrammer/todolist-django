@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <title>Register</title>
+</head>
+<body>
+  <h2>Sign up</h2>
+  <form method="post" class="simple-form">
+    {% csrf_token %}
+    {% for field in form %}
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+            <div class="error">{{ field.errors.0 }}</div>
+        {% endif %}
+    {% endfor %}
+    <br/>
+    <br/>
+    <button type="submit">Sign up</button>
+    
+<a href="{% url 'welcome' %}" class="btn-back">Back</a>
+
+  </form>
+</body>
+</html>
