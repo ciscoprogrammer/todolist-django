@@ -1,9 +1,29 @@
+{% load static %}
+<html>
+    <head>
+        {% load static %}
+            
+            <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">        
+        
+    </head>
+<body>
+    <div class="user-profile">
 <h1>{{ request.user.username }}'s Profile</h1>
 <h2>Task List:</h2>
 <ul>
     {% for task in tasks %}
-        <li>{{ task.name }} - {{ task.description }}</li>
+        <li>
+            {{ task.name }} - {{ task.description }}
+        {% if task.is_completed %}
+                - <strong>Status:</strong> Completed
+            {% else %}
+                - <strong>Status:</strong> Not Completed
+            {% endif %}
+        </li>
     {% empty %}
         <li>No tasks available.</li>
     {% endfor %}
 </ul>
+</div>
+</body>
+</html>

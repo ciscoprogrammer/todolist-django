@@ -13,7 +13,12 @@ class TaskForm(forms.ModelForm):
 
     description = forms.CharField(
         widget=forms.Textarea(attrs={'class': 'description-input'}),
-        required=False  # Because it can be blank
+        required=False  
+    )
+
+    is_completed = forms.BooleanField(
+        required=False,  
+        widget=forms.CheckboxInput(attrs={'class': 'is-completed-input'})
     )
 
     def clean_name(self):
